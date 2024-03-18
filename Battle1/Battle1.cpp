@@ -1,7 +1,7 @@
 // Battle1.cpp : It's the game where you have to fight with your enemy.
 //
 // 
-//Бібліотеки
+//ГЃВіГЎГ«ВіГ®ГІГҐГЄГЁ
 #include <iostream>
 #include <cstdlib>
 #include <ctime>
@@ -11,7 +11,7 @@
 #include <stdlib.h>
 using namespace std;
 
-int heroHealth = 1000;  /* Глобальні змінні*/
+int heroHealth = 1000;  /* ГѓГ«Г®ГЎГ Г«ГјГ­Ві Г§Г¬ВіГ­Г­Ві*/
 int enemyHealth = 2000;
 int heroEnergy = 100;
 int enemyEnergy = 200;
@@ -28,18 +28,18 @@ enum Colors
     Red=4,
     Orange=6,
     BrightBlue=11
-}; // Щоб розкрашувати строки
+}; // Г™Г®ГЎ Г°Г®Г§ГЄГ°Г ГёГіГўГ ГІГЁ Г±ГІГ°Г®ГЄГЁ
 
-void Game();    //Функція, у якій відбувається сама гра
-void HeroAttack();  //Атака гравця
-void EnemyAttack(); //Атака ворога
-void EnemyAction(); //Дії ворога
-void HeroRegen();   //Регенерація життя гравця
-void Block();   //Блок гравця
-void TakeHeroEnergy();  //Ворог забирає енергію гравця
-void Description(); //Опис гри
-void EnemyTidalWave();  //Руйнівна хвиля ворога
-void HeroTidalWave();   //Руйнівна хвиля гравця
+void Game();    //Г”ГіГ­ГЄГ¶ВіГї, Гі ГїГЄВіГ© ГўВіГ¤ГЎГіГўГ ВєГІГјГ±Гї Г±Г Г¬Г  ГЈГ°Г 
+void HeroAttack();  //ГЂГІГ ГЄГ  ГЈГ°Г ГўГ¶Гї
+void EnemyAttack(); //ГЂГІГ ГЄГ  ГўГ®Г°Г®ГЈГ 
+void EnemyAction(); //Г„ВіВї ГўГ®Г°Г®ГЈГ 
+void HeroRegen();   //ГђГҐГЈГҐГ­ГҐГ°Г Г¶ВіГї Г¦ГЁГІГІГї ГЈГ°Г ГўГ¶Гї
+void Block();   //ГЃГ«Г®ГЄ ГЈГ°Г ГўГ¶Гї
+void TakeHeroEnergy();  //Г‚Г®Г°Г®ГЈ Г§Г ГЎГЁГ°Г Вє ГҐГ­ГҐГ°ГЈВіГѕ ГЈГ°Г ГўГ¶Гї
+void Description(); //ГЋГЇГЁГ± ГЈГ°ГЁ
+void EnemyTidalWave();  //ГђГіГ©Г­ВіГўГ­Г  ГµГўГЁГ«Гї ГўГ®Г°Г®ГЈГ 
+void HeroTidalWave();   //ГђГіГ©Г­ВіГўГ­Г  ГµГўГЁГ«Гї ГЈГ°Г ГўГ¶Гї
 
 int main()
 {
@@ -89,7 +89,7 @@ int main()
 
     _getch();
 }
-// Опис Функції Game()
+// ГЋГЇГЁГ± Г”ГіГ­ГЄГ¶ВіВї Game()
 void Game()
 {
     
@@ -157,7 +157,7 @@ void Game()
     }
     
 }
-// Опис Функції HeroAttack()
+// ГЋГЇГЁГ± Г”ГіГ­ГЄГ¶ВіВї HeroAttack()
 void HeroAttack()
 {
     srand(static_cast<unsigned int>(time(0)));
@@ -178,7 +178,7 @@ void HeroAttack()
     heroEnergy += 10;
     queue = false;
 }
-// Опис Функції EnemyAction()
+// ГЋГЇГЁГ± Г”ГіГ­ГЄГ¶ВіВї EnemyAction()
 void EnemyAction()
 {
     int randt;
@@ -192,7 +192,7 @@ void EnemyAction()
         EnemyAttack();
     
 }
-// Опис Функції EnemyAttack()
+// ГЋГЇГЁГ± Г”ГіГ­ГЄГ¶ВіВї EnemyAttack()
 void EnemyAttack()
 {
     
@@ -223,7 +223,7 @@ void EnemyAttack()
             enemyHealth = 2000;
     }
 }
-// Опис Функції HeroRegen()
+// ГЋГЇГЁГ± Г”ГіГ­ГЄГ¶ВіВї HeroRegen()
 void HeroRegen()
 {
     if (heroEnergy < 30)
@@ -241,7 +241,7 @@ void HeroRegen()
         heroHealth = 1000;
     queue = false;
 }
-// Опис Функії Block()
+// ГЋГЇГЁГ± Г”ГіГ­ГЄВіВї Block()
 void Block()
 {
     
@@ -251,7 +251,7 @@ void Block()
     cout << "\n\t\tYou blocked\n";
     heroEnergy += 10;
 }
-// Опис Функції TakeHeroEnergy()
+// ГЋГЇГЁГ± Г”ГіГ­ГЄГ¶ВіВї TakeHeroEnergy()
 void TakeHeroEnergy()
 {
     heroEnergy -=20;
@@ -264,7 +264,7 @@ void TakeHeroEnergy()
     cout << "Enemy took 20 points of your energy\n\n";
     block = false;
 }
-// Опис Функції Description()
+// ГЋГЇГЁГ± Г”ГіГ­ГЄГ¶ВіВї Description()
 void Description()
 {
     cout << "This game calls \"Battle of legends\".\n";
@@ -272,9 +272,9 @@ void Description()
     cout << "With \"Attack\" action you heat the enemy with random damage.\n";
     cout << "With \"Regen\" action you regeneration your hp. It cost 30 energy points.\n";
     cout << "With \"Block\" action you block yourself. Enemy's damage devides by 4.\n";
-    cout << "With \"Skip\" action you just skip your move.\n\n\n";
+    cout << "With \"Tidal wave\" action you dived enemy's health by 2.\n\n\n";
 }
-// Опис Функції EnemyTidalWave()
+// ГЋГЇГЁГ± Г”ГіГ­ГЄГ¶ВіВї EnemyTidalWave()
 void EnemyTidalWave()
 {
 
@@ -284,7 +284,7 @@ void EnemyTidalWave()
     SetConsoleTextAttribute(hConsole, Red);
     cout << "\n\t\tEnemy used \"Tidal wave\"\n";
 }
-// Опис Функції HeroTidalWave()
+// ГЋГЇГЁГ± Г”ГіГ­ГЄГ¶ВіВї HeroTidalWave()
 void HeroTidalWave()
 {
     if (heroEnergy < 60)
