@@ -272,7 +272,7 @@ void Description()
     cout << "With \"Attack\" action you heat the enemy with random damage.\n";
     cout << "With \"Regen\" action you regeneration your hp. It cost 30 energy points.\n";
     cout << "With \"Block\" action you block yourself. Enemy's damage devides by 4.\n";
-    cout << "With \"Tidal wave\" action you dived enemy's health by 2.\n\n\n";
+    cout << "With \"Tidal wave\" action you devide enemy's health by 2.\n\n\n";
 }
 // Îïèñ Ôóíêö³¿ EnemyTidalWave()
 void EnemyTidalWave()
